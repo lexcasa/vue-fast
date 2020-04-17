@@ -1,3 +1,32 @@
 <div id="blog--component">
-	<h2>{{titulo}}</h2>
+	<div v-if="!seeMore">
+		<h2>{{titulo}}</h2>
+		<div class="row blog--article" v-for="article in articles">
+			<div class="col-md-12">
+				<img v-bind:src="article.img" class="img-responsive">
+			</div>
+			<div class="col-md-12">
+				<h2>{{article.name}}</h2>
+				<p>{{article.shortDescription}}</p>
+				<a 
+					v-bind:href="article.link" class="btn btn-primary" 
+					v-on:click="verMas(article)">
+					Ver más
+				</a>
+			</div>
+		</div>
+	</div>
+	<div v-if="seeMore">
+		<div class="row blog--article">
+			<div class="col-md-12" style="margin-bottom: 1rem;">
+				<h2>{{article.name}}</h2>
+				<img v-bind:src="article.img" class="img-responsive">
+			</div>
+			<div class="col-md-12">
+				<p>{{article.description}}</p>
+				<button class="btn btn-secondary" v-on:click="back()">Volver</button>
+			</div>
+
+		</div>
+	</div>
 </div>

@@ -16,5 +16,13 @@
 	}
 	#blog--component {
 		margin-top: 2rem;
+		padding-bottom: 2rem;
+	}
+	.img-responsive {
+		width: 25rem;
+	}
+	.blog--article {
+		margin-bottom: 2rem;
+		margin-top: 1rem;
 	}
 }
