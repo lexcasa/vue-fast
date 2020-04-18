@@ -1,0 +1,13 @@
+<div id="blog-cm-component" style="margin-top: 2rem;">
+	<form>
+		<input type="text" name="name" class="form-control" v-model="article.name" placeholder="Nombre">
+		<br>
+		<input type="text" name="img" class="form-control" v-model="article.img" placeholder="URL Imágen">
+		<br>
+		<textarea class="form-control" v-model="article.shortDescription" placeholder="Descripción corta"></textarea>
+		<br>
+		<textarea class="form-control" v-model="article.description" placeholder="Descripción"></textarea>
+		<br>
+		<button class="btn btn-primary" v-on:click="guardarArticulo" type="button">Guardar</button>
+	</form>
+</div>

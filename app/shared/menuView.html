@@ -6,7 +6,9 @@
   </button>
   <div class="collapse navbar-collapse" id="navbarNavAltMarkup">
     <div class="navbar-nav">
-	    <a v-bind:href="item.link" v-for="item in menuItems" class="nav-item nav-link active" 
-	  		>{{item.name}}</a>
+	    <router-link v-bind:to="item.link" v-for="item in menuItems" class="nav-item nav-link active" 
+	  		>{{item.name}}</router-link>
+	  	<router-link style="margin-left: 1rem" to="/blog/content/new" class="btn btn-success" 
+	  		>New blog!</router-link>
   </div>
 </nav>

@@ -1,4 +1,4 @@
-Vue.component('blog-component', function (resolve, reject){
+let BlogComponent = Vue.component('blog-component', function (resolve, reject){
 	Servicio.view('./app/components/blog/blogView.html', function (view){
 		resolve({
 			template: view,
